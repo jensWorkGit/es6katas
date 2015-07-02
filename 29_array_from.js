@@ -37,7 +37,7 @@ describe('`Array.from` converts an array-like object or list into an Array', () 
     });
     
     it('and we also get the object`s key as second parameter', function() {
-      const arr = Array.from(arrayLike, (value, key) => `${key}=${value}`);
+      const arr = Array.from(arrayLike, (value, key) => '${key}=${value}');
       assert.deepEqual(arr, ['0=one', '1=two']);
     });
   });

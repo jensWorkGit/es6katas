@@ -1,5 +1,8 @@
 // 5: arrow functions - basics
 // To do: make all tests pass, leave the asserts unchanged!
+//var assert = require("chai").assert;
+//import { assert } from 'chai';
+const assert = require('chai').assert;
 
 describe('arrow functions', function() {
   
