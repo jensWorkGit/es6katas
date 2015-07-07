@@ -1,6 +1,8 @@
 // 1: template strings - basics
 // To do: make all tests pass
 
+const assert = require('chai').assert;
+
 describe('template string, are wrapped in backticks', function() {
 
   it('prints x into a string using ${x}', function() {
@@ -15,8 +17,11 @@ describe('template string, are wrapped in backticks', function() {
   });
 
   it('get a function call result inside ${...}', function() {
-    function getDomain(){ return document.domain }
-    assert.equal(`${ getDomain() }`, 'tddbin.com');
+    const jsdom = require('jsdom').jsdom;
+    jsdom.env('<html />', ['http://tddbin.com'], function(){
+      function getDomain(){ return document.domain; }
+        assert.equal(`${ getDomain() }`, 'tddbin.com');
+      });
   });
 
 });

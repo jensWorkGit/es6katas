@@ -1,6 +1,8 @@
 // 22: class - creation
 // To do: make all tests pass, leave the assert lines unchanged!
 
+const assert = require('chai').assert;
+
 describe('class creation', () => {
 
   it('is as simple as `class XXX {}`', function() {

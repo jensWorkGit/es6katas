@@ -1,8 +1,9 @@
 // 11: destructuring - string
 // To do: make all tests pass, leave the assert lines unchanged!
 
-describe('destructuring also works on strings', () => {
+const assert = require('chai').assert;
 
+describe('destructuring also works on strings', () => {
 
   it('destructure every character', () => {
     let [a, b, c] = 'abc';

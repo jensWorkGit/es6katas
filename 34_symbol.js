@@ -4,9 +4,14 @@
 
 // To do: make all tests pass, leave the assert lines unchanged!
 
+const assert = require('chai').assert;
+
 describe('Symbol', function() {
 
   it('`Symbol` lives in the global scope', function(){
+    const jsdom = require('jsdom').jsdom;
+    let document = jsdom('<html><body/></html>');
+
     document.Symbol = Symbol;
     assert.equal(Symbol, document.Symbol);
   });
